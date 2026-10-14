@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #bcbd8b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 550px;
+  background: #717744;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #011627;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #011627;
+  margin-bottom: 30px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 33.33%;
+  height: 100%;
+  background: #373d20;
+  transition: width 0.4s ease;
+}
+
+.step-text {
+  text-align: center;
+  color: #011627;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: none;
+  animation: slideIn 0.4s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.step h2 {
+  margin-bottom: 25px;
+  color: #373d20;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #011627;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #373d20;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  background: #373d20;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#previousBtn {
+  background: #373d20;
+}
+
+.summary {
+  display: none;
+  animation: slideIn 0.4s ease;
+}
+
+.summary h2 {
+  margin-bottom: 25px;
+  color: #011627;
+}
+
+.summary p {
+  margin-bottom: 15px;
+  color: #011627;
+}
+
+.summary span {
+  color: #011627;
+}
+
+.summary button {
+  width: 100%;
+  margin-top: 15px;
+}
